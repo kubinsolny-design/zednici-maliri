@@ -57,3 +57,18 @@ lightbox?.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeLightbox();
 });
+
+const atlasTabs = document.querySelectorAll('[data-atlas-target]');
+const atlasPanels = document.querySelectorAll('[data-atlas-panel]');
+
+atlasTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const selected = tab.dataset.atlasTarget;
+    atlasTabs.forEach((item) => {
+      item.setAttribute('aria-selected', String(item === tab));
+    });
+    atlasPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.atlasPanel !== selected;
+    });
+  });
+});

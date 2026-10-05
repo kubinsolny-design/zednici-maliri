@@ -234,3 +234,105 @@ h3 { margin-bottom: .65rem; font-size: 1.45rem; line-height: 1.25; }
   .price-table { font-size: .9rem; }
   .price-table th, .price-table td { padding: .75rem .65rem; }
 }
+
+/* Autorská vrstva úvodní stránky: pracovní výkres, vzorník materiálů a nepravidelný rytmus realizací. */
+body {
+  background-color: #eef0eb;
+  background-image: linear-gradient(rgba(23,33,31,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(23,33,31,.025) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+}
+.section--white { background: rgba(255,255,255,.94); }
+.site-header { border-bottom: 2px solid rgba(23,33,31,.12); }
+
+.hero { min-height: 44rem; }
+.hero::before { background: linear-gradient(90deg, rgba(9,16,14,.96) 0%, rgba(9,16,14,.77) 43%, rgba(9,16,14,.3) 100%), url("assets/33.jpg") center / cover; }
+.hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .46; background-image: linear-gradient(90deg, transparent 0 69.9%, rgba(255,255,255,.32) 70% 70.12%, transparent 70.12%), linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px); background-size: 100% 100%, 100% 5.5rem; mix-blend-mode: screen; }
+.hero-content { min-height: 44rem; padding: 7rem 0 4rem; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) 13rem; align-items: end; gap: 1.5rem; }
+.hero-index { align-self: start; display: grid; gap: .7rem; padding-top: .65rem; border-top: 1px solid rgba(255,255,255,.6); color: rgba(255,255,255,.75); }
+.hero-index span { color: #f2a57e; font: 700 4.6rem/.8 Georgia, "Times New Roman", serif; letter-spacing: -.08em; }
+.hero-index small { font-size: .72rem; font-weight: 800; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
+.hero-panel { position: relative; z-index: 1; }
+.hero-footnote { display: flex; flex-wrap: wrap; gap: .5rem 1.3rem; margin: 2rem 0 0; color: rgba(255,255,255,.72); font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.hero-footnote span { display: inline-flex; align-items: center; gap: .55rem; }
+.hero-footnote span:not(:last-child)::after { content: ""; width: 1.7rem; height: 1px; background: rgba(255,255,255,.45); }
+.hero-record { position: relative; z-index: 1; justify-self: end; width: 12.5rem; padding: 1.15rem; border: 1px solid rgba(255,255,255,.5); color: var(--white); background: rgba(23,33,31,.52); backdrop-filter: blur(4px); }
+.hero-record span, .hero-record small { display: block; color: #d7e1dc; font-size: .7rem; font-weight: 800; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
+.hero-record strong { display: block; margin: 1.8rem 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; line-height: 1.05; }
+
+.trust-strip { position: relative; overflow: hidden; }
+.trust-strip::before { content: "ŘEMESLO / OSTRAVA / ŘEMESLO / OSTRAVA /"; position: absolute; left: -1rem; top: 50%; color: rgba(255,255,255,.055); font: 800 5rem/1 Arial, "Segoe UI", sans-serif; letter-spacing: .05em; white-space: nowrap; transform: translateY(-50%); }
+.trust-list { position: relative; }
+
+.section-intro { position: relative; }
+.service-grid { grid-auto-rows: minmax(8rem, auto); }
+.service-card { min-height: 17rem; border-top: 4px solid transparent; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.service-card:nth-child(1) { grid-column: span 7; min-height: 25rem; background: linear-gradient(135deg, #17211f 0 64%, #253a35 64%); }
+.service-card:nth-child(2) { grid-column: span 5; min-height: 25rem; background: linear-gradient(155deg, #314a42 0 70%, #3f5b51 70%); }
+.service-card:nth-child(3) { grid-column: span 4; min-height: 18rem; }
+.service-card:nth-child(4) { grid-column: span 4; min-height: 18rem; background: #e8ded0; color: var(--ink); }
+.service-card:nth-child(5) { grid-column: span 4; min-height: 18rem; background: #b94e29; }
+.service-card:nth-child(4) h3, .service-card:nth-child(4) p { color: var(--ink); }
+.service-card:nth-child(4) p { color: var(--ink-soft); }
+.service-card:nth-child(4) span { color: var(--brick-dark); }
+.service-card:hover { border-top-color: #f2a57e; }
+.service-card::after { content: ""; position: absolute; top: 1rem; left: 1rem; width: 2.4rem; height: 2.4rem; border-top: 1px solid rgba(255,255,255,.45); border-left: 1px solid rgba(255,255,255,.45); }
+.service-card:nth-child(4)::after { border-color: rgba(23,33,31,.35); }
+
+.feature-figure { position: relative; margin: 0; }
+.feature-figure::after { content: ""; position: absolute; right: -1rem; top: -1rem; width: 7.5rem; height: 7.5rem; border-top: 3px solid var(--brick); border-right: 3px solid var(--brick); pointer-events: none; }
+.feature-figure figcaption { position: absolute; bottom: 1rem; left: 1rem; max-width: 15rem; padding: .7rem .8rem; color: var(--white); background: var(--ink); font-size: .74rem; font-weight: 800; letter-spacing: .06em; line-height: 1.35; text-transform: uppercase; }
+
+.material-atlas { padding: 5.5rem 0; color: var(--white); background: #17211f; position: relative; overflow: hidden; }
+.material-atlas::before { content: "MATERIÁL / POVRCH / DETAIL"; position: absolute; right: -3rem; top: 2rem; color: rgba(255,255,255,.045); font: 800 clamp(4rem, 11vw, 10rem)/.85 Arial, "Segoe UI", sans-serif; letter-spacing: -.06em; white-space: nowrap; }
+.atlas-heading { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .82fr); align-items: end; gap: 3rem; margin-bottom: 2.8rem; }
+.atlas-heading h2 { max-width: 14ch; color: var(--white); }
+.atlas-heading .lead { margin: 0; color: #dbe5e0; }
+.atlas-shell { position: relative; display: grid; grid-template-columns: 13.5rem minmax(0, 1fr); border: 1px solid rgba(255,255,255,.28); }
+.atlas-tabs { display: grid; align-content: start; border-right: 1px solid rgba(255,255,255,.28); }
+.atlas-tab { display: flex; align-items: center; gap: .7rem; padding: 1.2rem 1rem; border: 0; border-bottom: 1px solid rgba(255,255,255,.2); color: #d6e0db; background: transparent; text-align: left; font-size: .95rem; font-weight: 800; }
+.atlas-tab:last-child { border-bottom: 0; }
+.atlas-tab span { color: #f2a57e; font: 700 1.45rem/1 Georgia, "Times New Roman", serif; }
+.atlas-tab[aria-selected="true"] { color: var(--white); background: var(--brick); }
+.atlas-tab[aria-selected="true"] span { color: var(--white); }
+.atlas-panel { min-height: 29rem; display: grid; grid-template-columns: 1.05fr .95fr; }
+.atlas-panel[hidden] { display: none; }
+.atlas-panel figure { margin: 0; position: relative; min-height: 29rem; }
+.atlas-panel img { height: 100%; object-fit: cover; }
+.atlas-panel figcaption { position: absolute; left: 0; bottom: 0; padding: .8rem 1rem; color: var(--white); background: rgba(23,33,31,.86); font-size: .73rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.atlas-copy { padding: clamp(1.7rem, 4vw, 3.2rem); display: flex; flex-direction: column; justify-content: center; background: #22332f; }
+.atlas-kicker { margin-bottom: .8rem; color: #f2a57e; font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.atlas-copy h3 { max-width: 10ch; color: var(--white); font-size: clamp(2rem, 3.3vw, 3.15rem); line-height: 1.05; }
+.atlas-copy > p:not(.atlas-kicker) { color: #d7e2dc; }
+.atlas-copy .button { align-self: flex-start; margin-top: .7rem; }
+
+@media (max-width: 54rem) {
+  .hero, .hero-content { min-height: 42rem; }
+  .hero-content { grid-template-columns: 3.4rem minmax(0, 1fr); }
+  .hero-record { display: none; }
+  .service-card:nth-child(1), .service-card:nth-child(2) { grid-column: span 6; min-height: 23rem; }
+  .service-card:nth-child(3), .service-card:nth-child(4), .service-card:nth-child(5) { grid-column: span 4; }
+  .atlas-heading, .atlas-panel { grid-template-columns: 1fr; gap: 1.5rem; }
+  .atlas-shell { grid-template-columns: 1fr; }
+  .atlas-tabs { grid-template-columns: repeat(3, 1fr); border-right: 0; border-bottom: 1px solid rgba(255,255,255,.28); }
+  .atlas-tab { justify-content: center; border-bottom: 0; border-right: 1px solid rgba(255,255,255,.2); }
+  .atlas-tab:last-child { border-right: 0; }
+  .atlas-panel figure { min-height: 22rem; }
+}
+
+@media (max-width: 38rem) {
+  .hero, .hero-content { min-height: 40rem; }
+  .hero-content { padding: 4.75rem 0 2.7rem; grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-index { display: flex; align-items: baseline; gap: .8rem; padding: 0; }
+  .hero-index span { font-size: 3.2rem; }
+  .hero-index small br { display: none; }
+  .hero-footnote { margin-top: 1.5rem; font-size: .7rem; }
+  .service-card:nth-child(n) { grid-column: span 12; min-height: 15rem; }
+  .service-card:nth-child(1), .service-card:nth-child(2) { min-height: 19rem; }
+  .feature-figure::after { right: -.5rem; top: -.5rem; width: 5rem; height: 5rem; }
+  .material-atlas { padding: 4rem 0; }
+  .atlas-tabs { grid-template-columns: 1fr; }
+  .atlas-tab { justify-content: flex-start; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .atlas-tab:last-child { border-bottom: 0; }
+  .atlas-panel figure { min-height: 18rem; }
+  .atlas-copy h3 { font-size: 2.25rem; line-height: 1.1; }
+}
